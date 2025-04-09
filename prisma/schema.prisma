@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(uuid())
+  email        String        @unique
+  password     String
+  name         String
+  role         String        @default("STUDENT") // enum reemplazado por string
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  subscription Subscription?
+}
+
+model Subscription {
+  id        String   @id @default(uuid())
+  userId    String   @unique // Agregado @unique
+  user      User     @relation(fields: [userId], references: [id])
+  status    String
+  startDate DateTime
+  endDate   DateTime?
+}
+
+model Module {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  section     String   @default("PREESCOLAR") // enum reemplazado por string
+  contentUrl  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
