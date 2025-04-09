@@ -1,5 +1,6 @@
 import { cookies } from "next/headers";
-import jwt from "jsonwebtoken";
+import * as jwt from "jsonwebtoken"; // ✅
+
 import { redirect } from "next/navigation";
 
 export default function DashboardIndex() {
