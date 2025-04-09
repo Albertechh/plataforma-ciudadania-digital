@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 
+
 export const metadata = {
   title: "Ciudadanía Digital",
   description: "Una plataforma educativa desde preescolar hasta preparatoria",
