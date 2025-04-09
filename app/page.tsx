@@ -1,5 +1,6 @@
 import Link from "next/link";
-import ChihuahuaIngeniero from "@/components/ChihuahuaIngeniero";
+import ChihuahuaIngeniero from "../components/ChihuahuaIngeniero";
+
 
 export default function Home() {
   return (
