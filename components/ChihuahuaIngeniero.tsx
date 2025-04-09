@@ -1,17 +1,18 @@
-import Image from "next/image";
+'use client';
+
+import Image from 'next/image';
 
 export default function ChihuahuaIngeniero() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="mt-4">
       <Image
-        src="/chihuahua-ingeniero.png"
-        alt="Ingeniero Chihuahua Dorado"
+        src="/ingeniero.png" // Asegúrate que esta imagen esté en /public
+        alt="Chihuahua Ingeniero"
         width={200}
         height={200}
+        className="rounded-full shadow-lg"
       />
-      <p className="mt-2 text-center">
-        ¡Hola! Soy Ingeniero, tu guía para aprender ciudadanía digital.
-      </p>
+      <p className="text-sm mt-2">¡Hola! Soy Ingeniero, tu guía digital 🐶✨</p>
     </div>
   );
 }
